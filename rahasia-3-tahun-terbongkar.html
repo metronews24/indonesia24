@@ -11,8 +11,11 @@
 
     <meta property="og:title" content="Pengalaman 3 Tahun di Mahjong Ways 2, Pola Ini Yang Paling Ganas">
     <meta property="og:description" content="Membongkar strategi dan pola Mahjong Ways 2 berdasarkan pengalaman bermain selama 3 tahun.">
-    <meta property="og:image" content="https://metronews24.github.io/indonesia24/img/Rahasia%203%20Tahun%20Terbongkar.jpg">
+    <meta property="og:image" content="https://metronews24.github.io/indonesia24/img/Rahasia%203%20Tahun%20Terbongkar.webp">
     <meta property="og:type" content="article">
+
+    <!-- Optimasi LCP: Preload gambar utama -->
+    <link rel="preload" as="image" href="https://metronews24.github.io/indonesia24/img/Rahasia%203%20Tahun%20Terbongkar.webp">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -92,10 +95,14 @@
                 </div>
 
                 <div class="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 ring-1 ring-gray-700">
+                    <!-- Optimasi LCP: fetchpriority="high" dan width/height -->
                     <img 
-                        src="https://metronews24.github.io/indonesia24/img/Rahasia%203%20Tahun%20Terbongkar.jpg" 
+                        src="https://metronews24.github.io/indonesia24/img/Rahasia%203%20Tahun%20Terbongkar.webp" 
                         alt="Rahasia 3 tahun mahjong ways terbongkar" 
                         class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+                        fetchpriority="high"
+                        width="800"
+                        height="450"
                     >
                 </div>
 
