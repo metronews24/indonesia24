@@ -21,9 +21,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Small manual fix to prevent flash of unstyled text */
+        body { font-family: 'Inter', sans-serif; background-color: #111827; color: #f3f4f6; }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased selection:bg-blue-500 selection:text-white font-[Inter]">
+<body class="bg-gray-900 text-gray-100 antialiased selection:bg-blue-500 selection:text-white">
 
     <nav class="bg-gray-800/95 backdrop-blur shadow-lg sticky top-0 z-50 border-b border-gray-700">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
