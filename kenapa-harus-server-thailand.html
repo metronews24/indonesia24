@@ -11,14 +11,15 @@
 
     <meta property="og:title" content="Akhirnya Terbongkar! Alasan Teknis Kenapa Harus Pilih Server Thailand">
     <meta property="og:description" content="Investigasi teknis: Mengapa server Thailand memiliki respon RNG lebih baik? Simak datanya di sini.">
-    <meta property="og:image" content="https://metronews24.github.io/indonesia24/img/thailand%20selalu%20didepan.webp">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=800&auto=format&fit=crop">
     <meta property="og:type" content="article">
-    <link rel="preload" as="image" href="https://metronews24.github.io/indonesia24/img/thailand%20selalu%20didepan.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
         tailwind.config = {
@@ -39,7 +40,19 @@
     </script>
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #111827; color: #f3f4f6; }
+        /* Critical CSS to prevent Flash of Unstyled Content (FOUC) */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #111827; 
+            color: #f3f4f6; 
+            margin: 0;
+        }
+        /* Pre-style the nav to maintain layout stability during load */
+        nav {
+            height: 4rem; /* h-16 equivalent */
+            border-bottom: 1px solid #374151;
+            background-color: rgba(31, 41, 55, 0.95);
+        }
         .table-wrapper { overflow-x: auto; }
     </style>
 </head>
