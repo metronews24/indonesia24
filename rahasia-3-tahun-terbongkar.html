@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,45 +15,63 @@
     <meta property="og:type" content="article">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
+<body class="bg-gray-900 text-gray-100 antialiased selection:bg-blue-500 selection:text-white">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- Navbar Dark Mode -->
+    <nav class="bg-gray-800/95 backdrop-blur shadow-lg sticky top-0 z-50 border-b border-gray-700">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="font-bold text-xl text-blue-600">Indonesia24</span>
+                    <span class="font-bold text-xl text-blue-400">Indonesia24</span>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="#" class="text-gray-500 hover:text-blue-600 text-sm font-medium">Home</a>
-                    <a href="#" class="text-gray-500 hover:text-blue-600 text-sm font-medium">Tips</a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400 text-sm font-medium transition-colors">Home</a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400 text-sm font-medium transition-colors">Tips</a>
                 </div>
             </div>
         </div>
     </nav>
+
     <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <article>
             
             <header class="mb-8">
-                <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Strategi Mahjong</span>
-                <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
+                <span class="text-blue-400 font-semibold tracking-wide uppercase text-sm">Strategi Mahjong</span>
+                <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-white leading-tight">
                     Pengalaman 3 Tahun di Mahjong Ways 2, Pola Ini Yang Paling Ganas
                 </h1>
                 
                 <div class="mt-4 flex items-center">
                     <div class="flex-shrink-0">
-                        <div class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+                        <div class="h-10 w-10 rounded-full bg-blue-900/50 flex items-center justify-center text-blue-300 font-bold border border-blue-700/50">
                             AB
                         </div>
                     </div>
                     <div class="ml-3">
-                        <p class="text-sm font-medium text-gray-900">Penulis: <span class="text-blue-600">Anton Budiarto</span></p>
-                        <div class="flex space-x-1 text-sm text-gray-500">
+                        <p class="text-sm font-medium text-gray-200">Penulis: <span class="text-blue-400">Anton Budiarto</span></p>
+                        <div class="flex space-x-1 text-sm text-gray-400">
                             <time datetime="2023-10-27">27 Okt 2023</time>
                             <span aria-hidden="true">&middot;</span>
                             <span>5 min baca</span>
@@ -63,80 +81,85 @@
             </header>
 
             <figure class="mb-8">
-                <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                <!-- Tombol dengan style yang disesuaikan untuk Dark Mode -->
+                <div class="flex flex-row gap-3 mb-5 w-full">
+                    <a href="https://rtp.prediksiguritawin.com/" class="flex-1 text-center bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg shadow-blue-900/50 transition-all duration-200 transform hover:-translate-y-1 text-sm border border-blue-500/30">
+                        Lihat Pola Gacor
+                    </a>
+                    <a href="https://kannn.me/disc" class="flex-1 text-center bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-gray-950 font-extrabold py-3 px-4 rounded-lg shadow-lg shadow-orange-900/50 transition-all duration-200 transform hover:-translate-y-1 text-sm ring-1 ring-yellow-400/50">
+                        Daftar Disini
+                    </a>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 ring-1 ring-gray-700">
                     <img 
                         src="https://metronews24.github.io/indonesia24/img/Rahasia%203%20Tahun%20Terbongkar.jpg" 
                         alt="Rahasia 3 tahun mahjong ways terbongkar" 
-                        class="w-full h-64 sm:h-96 object-cover"
+                        class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
                     >
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-end justify-between sm:justify-start gap-3">
-                        <a href="https://rtp.prediksiguritawin.com/" class="flex-1 sm:flex-none text-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg shadow-blue-500/40 transition-all duration-200 transform hover:-translate-y-1 text-sm border border-blue-400/20">
-                            Lihat Pola Gacor
-                        </a>
-                        <a href="https://kannn.me/disc" class="flex-1 sm:flex-none text-center bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-gray-900 font-extrabold py-3 px-6 rounded-lg shadow-lg shadow-orange-500/40 transition-all duration-200 transform hover:-translate-y-1 text-sm ring-2 ring-yellow-200/50">
-                            Daftar Disini
-                        </a>
-                    </div>
                 </div>
 
-                <figcaption class="mt-2 text-center text-sm text-gray-500">
+                <figcaption class="mt-3 text-center text-sm text-gray-400 italic">
                     Ilustrasi: Membaca algoritma scatter hitam.
                 </figcaption>
             </figure>
 
-            <div class="prose prose-lg prose-blue mx-auto text-gray-700 leading-relaxed">
-                <p class="mb-4 font-medium text-lg italic border-l-4 border-blue-500 pl-4 bg-gray-50 py-2">
+            <!-- Prose Invert untuk Dark Mode Typography -->
+            <div class="prose prose-lg prose-invert prose-blue mx-auto leading-relaxed">
+                <p class="mb-6 font-medium text-lg italic border-l-4 border-blue-500 pl-4 bg-gray-800/50 py-3 pr-2 rounded-r-lg text-gray-200">
                     "Dulu saya pikir main Mahjong Ways itu murni hoki 100%. Saya salah besar. Setelah boncos berkali-kali di tahun pertama, saya mulai mencatat setiap putaran."
                 </p>
 
-                <p class="mb-4">
+                <p class="mb-4 text-gray-300">
                     Halo, saya Anton. Jika Anda sering melihat ubin Mahjong berputar tapi jarang pecah, Anda tidak sendirian. Tiga tahun lalu, saya juga begitu. Tapi setelah menghabiskan ribuan jam (dan saldo yang tidak sedikit) di depan layar, saya menemukan bahwa game PG Soft ini memiliki "ritme" atau yang sering kita sebut algoritma volatilitas.
                 </p>
 
-                <p class="mb-4">
+                <p class="mb-4 text-gray-300">
                     Hari ini, saya tidak akan memberi janji manis. Saya akan membagikan data teknis yang saya kumpulkan selama 3 tahun terakhir.
                 </p>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Kesalahan Fatal Pemula (Tahun Pertama Saya)</h2>
-                <p class="mb-4">
-                    Kesalahan terbesar saya di tahun pertama adalah <strong>Spam Turbo Spin</strong>. Saya pikir semakin cepat putaran, semakin cepat scatter turun. Ternyata, mesin Mahjong Ways 2 didesain untuk "menyedot" saldo di mode Turbo jika RTP akun sedang di bawah 40%.
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. Kesalahan Fatal Pemula (Tahun Pertama Saya)</h2>
+                <p class="mb-4 text-gray-300">
+                    Kesalahan terbesar saya di tahun pertama adalah <strong class="text-white">Spam Turbo Spin</strong>. Saya pikir semakin cepat putaran, semakin cepat scatter turun. Ternyata, mesin Mahjong Ways 2 didesain untuk "menyedot" saldo di mode Turbo jika RTP akun sedang di bawah 40%.
                 </p>
-                <p class="mb-4">
+                <p class="mb-4 text-gray-300">
                     Jangan pernah menahan tombol spin terus menerus. Itu memicu algoritma "cooling down" di mana simbol wild menjadi sangat jarang muncul.
                 </p>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Pola "Nafas" (Penemuan Tahun Ke-2)</h2>
-                <p class="mb-4">
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Pola "Nafas" (Penemuan Tahun Ke-2)</h2>
+                <p class="mb-4 text-gray-300">
                     Di tahun kedua, saya menemukan teknik yang saya namakan "Pola Nafas". Ini bukan sihir, ini cara me-reset RNG (Random Number Generator).
                 </p>
-                <div class="bg-blue-50 p-6 rounded-lg border border-blue-100 my-6">
-                    <h3 class="font-bold text-blue-800 text-lg mb-2">Rumus Pola Nafas:</h3>
-                    <ul class="list-none space-y-2">
-                        <li>🔵 <strong>10x Manual Spin (Bet Terkecil):</strong> Ini untuk memancing scatter bayangan (hanya lewat 2 biji).</li>
-                        <li>🚀 <strong>30x Turbo Spin (Auto):</strong> Naikkan bet 1 tingkat.</li>
-                        <li>🛑 <strong>Stop Seketika:</strong> Jika dalam 30x turbo tidak ada pecahan besar, matikan turbo, spin manual 1x, lalu jeda 1 menit.</li>
+                
+                <!-- Box Highlight Dark Mode -->
+                <div class="bg-blue-900/20 p-6 rounded-lg border border-blue-800/50 my-8 shadow-inner shadow-black/20">
+                    <h3 class="font-bold text-blue-300 text-lg mb-3">Rumus Pola Nafas:</h3>
+                    <ul class="list-none space-y-3 text-gray-300">
+                        <li class="flex items-start"><span class="mr-2 mt-1">🔵</span> <span><strong class="text-white">10x Manual Spin (Bet Terkecil):</strong> Ini untuk memancing scatter bayangan (hanya lewat 2 biji).</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1">🚀</span> <span><strong class="text-white">30x Turbo Spin (Auto):</strong> Naikkan bet 1 tingkat.</span></li>
+                        <li class="flex items-start"><span class="mr-2 mt-1">🛑</span> <span><strong class="text-white">Stop Seketika:</strong> Jika dalam 30x turbo tidak ada pecahan besar, matikan turbo, spin manual 1x, lalu jeda 1 menit.</span></li>
                     </ul>
                 </div>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Indikator "Emas" Akan Turun</h2>
-                <p class="mb-4">
-                    Pengalaman mengajarkan saya membaca tanda-tanda. Sebelum Scatter Hitam atau Naga Emas turun, biasanya ada tanda spesifik: <strong>Dua simbol Wild muncul di kolom 3 dan 4 tapi tidak pecah.</strong>
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Indikator "Emas" Akan Turun</h2>
+                <p class="mb-4 text-gray-300">
+                    Pengalaman mengajarkan saya membaca tanda-tanda. Sebelum Scatter Hitam atau Naga Emas turun, biasanya ada tanda spesifik: <strong class="text-white">Dua simbol Wild muncul di kolom 3 dan 4 tapi tidak pecah.</strong>
                 </p>
-                <p class="mb-4">
+                <p class="mb-4 text-gray-300">
                     Jika Anda melihat ini, itu adalah sinyal volatilitas sedang tinggi-tingginya. Di momen inilah pemain pro biasanya menaikkan taruhan (bet up) untuk 10 putaran ke depan.
                 </p>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Penting: Manajemen Saldo</h2>
-                <p class="mb-4">
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4">Penting: Manajemen Saldo</h2>
+                <p class="mb-4 text-gray-300">
                     Artikel ini tidak akan lengkap tanpa bicara soal keamanan. Sebagus apapun polanya, Mahjong Ways 2 tetaplah permainan probabilitas.
                 </p>
-                <ul class="list-disc pl-5 mb-6 space-y-2">
-                    <li><strong>Batasi Kekalahan:</strong> Saya selalu berhenti jika saldo turun 30% dari modal awal. Jangan mengejar kekalahan (revenge betting).</li>
-                    <li><strong>Tarik Kemenangan:</strong> Jika sudah profit 50%, tarik modalnya. Mainkan hanya profitnya.</li>
+                <ul class="list-disc pl-5 mb-6 space-y-2 text-gray-300 marker:text-blue-500">
+                    <li><strong class="text-white">Batasi Kekalahan:</strong> Saya selalu berhenti jika saldo turun 30% dari modal awal. Jangan mengejar kekalahan (revenge betting).</li>
+                    <li><strong class="text-white">Tarik Kemenangan:</strong> Jika sudah profit 50%, tarik modalnya. Mainkan hanya profitnya.</li>
                 </ul>
 
-                <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Kesimpulan</h2>
-                <p class="mb-4">
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4">Kesimpulan</h2>
+                <p class="mb-4 text-gray-300">
                     Pola di atas adalah hasil riset pribadi saya selama 3 tahun. Ini paling "ganas" saat digunakan di jam-jam sepi server (biasanya jam 02:00 - 04:00 pagi). Silakan dicoba dengan bijak, dan ingat, kontrol diri adalah kunci kemenangan sesungguhnya.
                 </p>
             </div>
@@ -145,9 +168,9 @@
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-12">
+    <footer class="bg-gray-800 border-t border-gray-700 mt-12">
         <div class="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-400">
+            <p class="text-center text-sm text-gray-500">
                 &copy; 2026 Indonesia24 Gaming Insight.
             </p>
         </div>
